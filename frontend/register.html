@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام در سینکر</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود | Syncer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    const form = document.getElementById("loginform");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); 
+        setTimeout(() => {
+            window.location.href = "dashboard.html";
+        }, 600);
+    });
+</script>
+<body>
+    <form class="formbody" id="loginform">
+        <h1 class="formtoptext">Syncer | سینکر</h1>
+        <p class="subtitle">ساخت اکانت جدید</p>
+        <div class="input-group">
+            <label>نام (این اسم برای دیگران نمایش داده میشود)</label>
+            <input type="text" placeholder="حمید محمدی" required>
+        </div>
+        <div class="input-group">
+            <label>ایمیل</label>
+            <input type="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="input-group">
+            <label>رمز</label>
+            <input type="password" placeholder="رمز ورود" required>
+        </div>
+        <div>
+        <div class="input-group">
+            <label>آی دی گیت هاب (برای ورود حتما نیاز به اکانت گیت هاب دارید)</label>
+            <input type="password" placeholder="رمز ورود" required>
+        </div>
+        <button class="button" type="submit">
+            <a href="."><p class="button">ساخت حساب کاربری</p></a></button>
+        <p class="footer-text">
+            حساب کاربری دارید؟
+            <a href="./login.html">ورود</a>
+        </p>
+    </form>
+</body>
+</html>
+
+</body>
+</html>

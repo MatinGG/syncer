@@ -1,52 +1,149 @@
-.vazirmatn {
-  font-family: "Vazirmatn", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+/* ===== GLOBAL ===== */
+
 * {
     box-sizing: border-box;
     font-family: "Vazirmatn", sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
-    
     margin: 0;
     min-height: 100vh;
+    background: linear-gradient(135deg, #eef2f7, #dfe7ef);
+    color: #1f2a44;
+}
+
+/* ===== HEADER ===== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.75);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: #6a7bb5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #4f7cff;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.header-login {
+    padding: 11px;
+    margin-top: 1px;
+    border-radius: 15px;
+    border: 1px #6a5cff solid;
+    color: #4f7cff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-cta {
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4f7cff, #6a5cff);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* =====================================================
+   FORM PAGES (login & register)
+   Works automatically when .formbody exists
+===================================================== */
+
+body:has(.formbody) {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #eef2f7, #dfe7ef);
+    padding-top: 80px;
 }
 
 .formbody {
     width: 400px;
     padding: 32px;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    animation: fadeUp 0.6s ease;
 }
 
 .formtoptext {
     text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 6px;
 }
 
 .subtitle {
     text-align: center;
-    color: #666;
-    margin: 8px 0 32px;
     font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .input-group label {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 6px;
     color: #333;
 }
@@ -54,107 +151,181 @@ body {
 .input-group input {
     width: 100%;
     padding: 12px 14px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 14px;
 }
-@keyframes formEnter {
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 
-.formbody {
-    animation: formEnter 0.7s ease-out;
-}
-button {
-    text-decoration: none;
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #4f7cff, #6a5cff);
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow:
-        0 10px 25px rgba(79, 124, 255, 0.35),
-        outset 0 0 0 rgba(255,255,255,0);    
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.2s ease,
-}
-button:hover {
-    transform: translateY(-2px);
-    box-shadow:
-        0 15px 35px rgba(79, 124, 255, 0.45),
-        inset 0 0 12px rgba(255,255,255,0.15);
-}
-button:active {
-    transform: translateY(1px) scale(0.98);
-    box-shadow:
-        0 6px 18px rgba(79, 124, 255, 0.3);
-}
-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.35),
-        transparent
-    );
-    transition: left 0.6s ease;
-}
-
-button:hover::before {
-    left: 100%;
-}
 .footer-text {
-    margin-top: 28px;
+    margin-top: 24px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     color: #666;
-    line-height: 1.8;
 }
 
 .footer-text a {
     color: #4f7cff;
     text-decoration: none;
     font-weight: 600;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.2s ease;
 }
-.footer-text a::after {
+
+/* ===== BUTTONS ===== */
+
+button,
+.btn-primary,
+.btn-secondary {
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button,
+.btn-primary {
+    background: linear-gradient(135deg, #4f7cff, #6a5cff);
+    color: white;
+    box-shadow: 0 14px 30px rgba(79,124,255,0.35);
+}
+
+button:hover,
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(79,124,255,0.45);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.6);
+    border: 1px solid #d6ddff;
+    color: #4f7cff;
+}
+
+.btn-secondary:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   LANDING PAGE ONLY (hero, features, etc.)
+   Applies only when .hero exists
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+    padding-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
     content: "";
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #4f7cff, #6a5cff);
-    transition: width 0.3s ease, left 0.3s ease;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(79,124,255,0.08), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(106,92,255,0.08), transparent 40%);
+    animation: floatBg 14s ease-in-out infinite;
 }
 
-.footer-text a:hover::after {
-    width: 100%;
-    left: 0;
+.hero-content {
+    max-width: 720px;
+    z-index: 1;
+    animation: fadeUp 1s ease;
 }
 
-.footer-text a:hover {
-    color: #3d68e0;
+.hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.4;
 }
 
+.hero h1 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #5c6f9c;
+    margin-top: 14px;
+}
+
+.hero-sub {
+    margin-top: 28px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    margin-top: 42px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== SECTIONS ===== */
+
+.features {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 24px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.1);
+}
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.cta {
+    padding: 90px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #f3f6ff, #eef2ff);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatBg {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}

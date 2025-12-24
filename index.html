@@ -4,37 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ورود | Syncer</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./frontend/styles.css">
 </head>
 <body>
-
     <form class="formbody" id="loginForm">
         <h1 class="formtoptext">ورود به حساب کاربری</h1>
         <p class="subtitle">Syncer | سینکر</p>
-
         <div class="input-group">
             <label>ایمیل یا نام کاربری</label>
             <input type="text" placeholder="example@email.com" required>
         </div>
-
         <div class="input-group">
             <label>رمز عبور</label>
             <input type="password" placeholder="Password" required>
         </div>
-
         <button type="submit">ورود</button>
-
         <p class="footer-text">
             حساب کاربری ندارید؟
             <a href="./frontend/register.html">ثبت‌نام</a>
         </p>
     </form>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById("loginForm");
@@ -47,6 +39,5 @@
             });
         });
     </script>
-
 </body>
 </html>

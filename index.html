@@ -1,91 +1,107 @@
-    <!DOCTYPE html>
-    <html lang="fa" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Syncer | Team Up Smarter</title>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syncer | Team Up Smarter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./frontend/styles.css">
+    <script type="module" src="./frontend/script.js" defer></script>
+</head>
+<body data-page="home">
 
-        <link rel="stylesheet" href="./frontend/styles.css">
-    </head>
-    <body>
-
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo">
-                Syncer
-                <span>smart team matching</span>
-            </div>
-
-            <nav class="nav-links">
-                <a href="#features">ویژگی‌ها</a>
-                <a href="#about">درباره</a>
-                <a href="#cta">شروع</a>
-            </nav>
-
-            <div class="header-actions">
-                <a href="./frontend/login.html" class="header-login">ورود</a>
-                <a href="./frontend/register.html" class="header-cta">ثبت‌نام</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>
-                این یک متن نمونه است  
-                <span>می‌توانی این متن را در فایل HTML تغییر بدهی</span>
-            </h1>
-
-            <p class="hero-sub">
-                این بخش برای توضیح کوتاه پروژه است.  
-                چیزی ساده، آرام و قابل اعتماد که کاربر حس خوبی بگیرد.
-            </p>
-
-            <div class="hero-actions">
-                <a href="./frontend/register.html" class="btn-primary">همین حالا شروع کن</a>
-                <a href="#features" class="btn-secondary">بیشتر بدانید</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" id="features">
-        <div class="feature-card">
-            <h3>کاملاً قابل شخصی‌سازی</h3>
-            <p>هر بخش از این صفحه را می‌توانی به‌راحتی تغییر بدهی.</p>
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            Syncer
+            <span>smart team matching</span>
         </div>
 
-        <div class="feature-card">
-            <h3>طراحی آرام و مدرن</h3>
-            <p>رنگ‌ها و انیمیشن‌ها طوری انتخاب شده‌اند که حس امنیت بدهند.</p>
-        </div>
+        <nav class="nav-links">
+            <a href="#features">ویژگی‌ها</a>
+            <a href="#about">درباره</a>
+            <a href="#cta">شروع</a>
+        </nav>
 
-        <div class="feature-card">
-            <h3>مناسب پروژه‌های واقعی</h3>
-            <p>این فقط یک دمو نیست، پایه‌ی یک محصول جدی است.</p>
+        <div class="header-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <a href="./frontend/login.html" class="header-login">ورود</a>
+            <a href="./frontend/register.html" class="header-cta">ثبت‌نام</a>
         </div>
-    </section>
+    </div>
+</header>
 
-    <section class="about" id="about">
-        <h2>اینجا یک بخش توضیحی است</h2>
-        <p>
-            می‌توانی درباره‌ی ایده، تیم، هدف یا آینده پروژه اینجا بنویسی.  
-            متن طولانی‌تر هم کاملاً جواب می‌دهد.
+<section class="hero">
+    <div class="hero-bg">
+        <svg viewBox="0 0 600 600" class="blob blob-1">
+            <path fill="#4f7cff" opacity="0.18"
+            d="M300,60C380,80,450,150,470,230C490,310,460,400,390,450C320,500,210,520,140,460C70,400,30,300,60,220C90,140,180,40,300,60Z"/>
+        </svg>
+
+        <svg viewBox="0 0 600 600" class="blob blob-2">
+            <path fill="#6a5cff" opacity="0.14"
+            d="M320,70C400,100,500,180,480,260C460,340,360,420,280,460C200,500,120,460,80,380C40,300,60,180,140,120C220,60,240,40,320,70Z"/>
+        </svg>
+    </div>
+
+    <div class="hero-content">
+        <h1>
+            تیم‌سازی هوشمند  
+            <span>آدم‌های درست، برای پروژه‌های درست</span>
+        </h1>
+
+        <p class="hero-sub">
+            Syncer کمک می‌کند توسعه‌دهنده‌ها، طراح‌ها و ایده‌پردازها  
+            سریع‌تر همدیگر را پیدا کنند و بسازند.
         </p>
-    </section>
 
-    <section class="cta" id="cta">
-        <h2>آماده‌ای تیم خودت را بسازی؟</h2>
-        <p>ثبت‌نام کن و اولین قدم را بردار</p>
-        <a href="./frontend/login.html" class="btn-primary">ساخت حساب</a>
-    </section>
+        <div class="hero-actions">
+            <a href="./frontend/register.html" class="btn-primary">شروع کن</a>
+            <a href="#features" class="btn-secondary">بیشتر بدان</a>
+        </div>
+    </div>
+</section>
 
-    <footer class="site-footer">
-        <p>© 2025 Syncer — All rights reserved</p>
-    </footer>
+<section class="features reveal" id="features">
+    <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3>سریع و هوشمند</h3>
+        <p>تطبیق اعضا بر اساس مهارت، هدف و زمان.</p>
+    </div>
 
-    </body>
-    </html>
+    <div class="feature-card">
+        <div class="icon">🎯</div>
+        <h3>متمرکز روی پروژه واقعی</h3>
+        <p>نه چت الکی، نه پروفایل خالی.</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="icon">🧠</div>
+        <h3>طراحی آرام و مدرن</h3>
+        <p>حس امنیت و تمرکز از اولین نگاه.</p>
+    </div>
+</section>
+
+<section class="about reveal" id="about">
+    <h2>Syncer چیست؟</h2>
+    <p>
+        یک پلتفرم برای آدم‌هایی که می‌خواهند بسازند،  
+        نه فقط حرف بزنند.
+    </p>
+</section>
+
+<section class="cta reveal" id="cta">
+    <h2>آماده‌ای تیم خودت را بسازی؟</h2>
+    <p class="downtext">ثبت‌نام کن و اولین قدم را بردار</p>
+    <a href="./frontend/register.html" class="btn-primary">ساخت حساب</a>
+</section>
+
+<footer class="site-footer">
+    © 2025 Syncer — All rights reserved
+</footer>
+
+</body>
+</html>

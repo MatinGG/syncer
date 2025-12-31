@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+body {
+    margin: 0;
+    font-family: Vazirmatn, sans-serif;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+}
+.sidebar {
+    background: #1a1f36;
+    color: white;
+    padding: 24px;
+}
+.main {
+    padding: 24px;
+}
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 <body>
-    <h1>YOU SIGNED IN!</h1>
+<div class="dashboard">
+    <aside class="sidebar">منو</aside>
+    <main class="main">خوش آمدید 👋</main>
+</div>
 </body>
 </html>

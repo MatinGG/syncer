@@ -30,3 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         revealElements.forEach(el => observer.observe(el));
     }
 });
+const menuBtn = document.querySelector(".menu-toggle");
+const mobileNav = document.querySelector(".mobile-nav");
+
+menuBtn?.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    mobileNav.classList.toggle("open");
+});

@@ -8,19 +8,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../frontend/login.css">
+<script src="./login.js"></script>
 </head>
 <body class="form-page">
 <form class="formbody" id="loginForm">
     <h1 class="formtoptext">ورود به حساب کاربری</h1>
     <p class="subtitle">Syncer | سینکر</p>
-    <div class="input-group">
-        <label>ایمیل یا نام کاربری</label>
-        <input type="text" placeholder="example@email.com" required>
-    </div>
-    <div class="input-group">
-        <label>رمز عبور</label>
-        <input type="password" placeholder="Password" required>
-    </div>
+<div class="input-group">
+  <label>ایمیل یا نام کاربری</label>
+  <input id="username" type="text" placeholder="example@email.com" required>
+</div>
+
+<div class="input-group">
+  <label>رمز عبور</label>
+  <input id="password" type="password" placeholder="Password" required>
+</div>
     <button type="submit">ورود</button>
     <p class="footer-text">
         حساب کاربری ندارید؟ <a href="register.html">ثبت‌نام</a>

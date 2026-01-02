@@ -8,14 +8,9 @@
 
 <h1 id="welcome"></h1>
 
-<script>
-  const username = localStorage.getItem("username");
+<p>📧 ایمیل: <span id="email"></span></p>
+<p>🐙 گیت‌هاب: <span id="github"></span></p>
 
-  if (username) {
-    document.getElementById("welcome").innerText =
-      `خوش آمدی ${username} 👋`;
-  }
-</script>
-
+<script src="./register.js"></script>
 </body>
 </html>

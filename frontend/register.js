@@ -1,21 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("registerForm");
-  if (!form) return;
+  const user = localStorage.getItem("user");
+  if (!user) return;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const userData = JSON.parse(user);
 
-    const userData = {
-      name: document.getElementById("displayName").value,
-      email: document.getElementById("email").value,
-      password: document.getElementById("password").value, // demo only
-      github: document.getElementById("github").value
-    };
+  document.getElementById("welcome").innerText =
+    `خوش آمدی ${userData.name} 👋`;
 
-    localStorage.setItem("user", JSON.stringify(userData));
+  document.getElementById("email").innerText =
+    userData.email || "ثبت نشده";
 
-    setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 600);
-  });
+  document.getElementById("github").innerText =
+    userData.github || "ثبت نشده";
 });
